@@ -5,11 +5,12 @@ Click the button below to start the workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/themilar/django-cookiecutter-sample/)
 
-Follow all the onscreen prompts accordingly and make sure the `project_name` is the same both times you're prompted to enter it as shown below:
+Follow all the onscreen prompts accordingly, and when setting custom values ensure that the `project_folder` and `project_slug` are the same:
 ```
-project_name: monty
-project_name [My Awesome Project]: monty
-project_slug [monty]: 
+#default values are shown in square brackets.
+project_folder[my_awesome_project]: 
+project_name [My Awesome Project]: 
+project_slug [my_awesome_project]: 
 ```
 Postgres is already enabled in the workspace, so all you need to do is create a database with the same name as your project:
 ```
