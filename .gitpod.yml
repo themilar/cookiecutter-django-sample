@@ -7,6 +7,8 @@ tasks:
     init: |
      pip3 install cookiecutter
      read -p "project_name: " projectvar
+     projectvar="${VARIABLE:-my_awesome_project}"
+     
      cookiecutter gh:cookiecutter/cookiecutter-django
      cd $projectvar
      python3 -m venv env
