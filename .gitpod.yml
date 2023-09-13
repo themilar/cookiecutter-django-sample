@@ -6,7 +6,7 @@ tasks:
   - name: Script Task
     init: |
      pip3 install cookiecutter
-     read -p "project_name: " projectvar
+     read -p "project_folder[my_awesome_project]: " projectvar
      projectvar="${VARIABLE:-my_awesome_project}"
      
      cookiecutter gh:cookiecutter/cookiecutter-django
