@@ -15,10 +15,15 @@ project_slug [my_awesome_project]:
 Postgres is already enabled in the workspace, so all you need to do is create a database with the same name as `project_slug` value you entered during setup:
 ```
 psql -U gitpod
-CREATE DATABASE project_name;
+CREATE DATABASE project_slug;
 ```
-Now for it to work you need to define a `DATABASE_URL` variable either in the `base.py` settings file or preferably a `.env` file that isn't included in VCS. The default database connection string looks like this `postgres:///dbname` the one you define should be in this format `postgres://user@localhost:port/dbname`.
-
+Now for it to work you need to define a `DATABASE_URL` variable. To set the environmental variable type the following in the terminal
+`export DATABASE_URL=postgres://gitpod@localhost:5432/my_awesome_project`
+The default database connection string looks like this `postgres:///dbname` the one you define should be in this format `postgres://user@localhost:port/dbname`.
+Based on the defaults your `.env` should look like this: 
+```
+DATABASE_URL=postgres://gipod@localhost:5432/my_awesome_project
+```
 And then migrate your database:
 ```
 python manage.py migrate
