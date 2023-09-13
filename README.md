@@ -17,14 +17,16 @@ Postgres is already enabled in the workspace, so all you need to do is create a 
 psql -U gitpod
 CREATE DATABASE project_slug;
 ```
-Now for it to work you need to define a `DATABASE_URL` variable. To set the environmental variable type the following in the terminal
-`export DATABASE_URL=postgres://gitpod@localhost:5432/my_awesome_project`
-The default database connection string looks like this `postgres:///dbname` the one you define should be in this format `postgres://user@localhost:port/dbname`.
-Based on the defaults your `.env` should look like this: 
+Now for it to work you need to define a `DATABASE_URL` variable. To set the environmental variable type the following in the terminal:
 ```
-DATABASE_URL=postgres://gipod@localhost:5432/my_awesome_project
+export DATABASE_URL=postgres://gitpod@localhost:5432/my_awesome_project
 ```
-And then migrate your database:
+If you prefer to use a `.env` file, don't forget to define the `DJANGO_READ_DOT_ENV_FILE` variable. The default database connection string looks like this `postgres:///dbname` the one you define should be in this format `postgres://user@localhost:port/dbname`.
+Based on the defaults your `.env` file should look like this: 
+```
+DATABASE_URL=postgres://gitpod@localhost:5432/my_awesome_project
+```
+And finally migrate your database:
 ```
 python manage.py migrate
 ```
