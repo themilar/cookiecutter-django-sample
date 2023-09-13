@@ -12,7 +12,7 @@ project_folder[my_awesome_project]:
 project_name [My Awesome Project]: 
 project_slug [my_awesome_project]: 
 ```
-Postgres is already enabled in the workspace, so all you need to do is create a database with the same name as your project:
+Postgres is already enabled in the workspace, so all you need to do is create a database with the same name as `project_slug` value you entered during setup:
 ```
 psql -U gitpod
 CREATE DATABASE project_name;
